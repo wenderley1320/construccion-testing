@@ -66,6 +66,21 @@
     margin-right: 5vw;
     font-family: Poppins, Lato, Sans serif, Arial;
 }
+/* palabras el horizontal */
+#words1 {
+    display: flex;
+    flex-direction: column; /* Para distribuir las palabras verticalmente */
+    position: absolute; 
+    left: 9vw; 
+    top: 50%; /* Alineamos verticalmente */
+    transform: translateY(-50%); /* Ajustamos verticalmente */
+    font-family: Poppins, Lato, Sans serif, Arial;
+}
+#words1 .word1 {
+    color: #ffffff;
+    margin: 3vw 0;
+    font-size: 2.4svw;
+}
 .truquito-content > *{
     transform: translateY(25px);
     transition: transform 0.6s;
@@ -135,16 +150,17 @@
     color: white;
     padding: 1vw;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 3.2vw;
     font-family: Poppins, Lato, Sans serif, Arial;
     padding: 14px 0;
 }
 #span-slogan{
     display: block;
     font-family: Poppins, Lato, Sans serif, Arial;
-    font-size: 1.5rem;
     margin-left: 1vw;
     padding-top: 1vh;
+    font-weight: bold;
+    font-size: 3.2vw;
 }
 /*-------------------- MEDIAS QUERIES ----------------------*/
 /*-------------------- PARA MOVILES----------------------*/
@@ -200,15 +216,20 @@
         font-family: Poppins, Lato, Sans serif, Arial;
     }
     #span-slogan{
+        font-size: 1.2rem;
+        font-weight: lighter;
         display: block;
         font-family: Poppins, Lato, Sans serif, Arial;
         margin-left: 1vw;
     }
 
     .truquito-content p {
-        font-size: 2.9vw;
+        font-size: 2.5vw;
         margin-left: 32vw;
         margin-right: 5vw;
+    }
+    #words1 .word1 {
+        font-size: 3vw;
     }
 }
 /*-------------------- MEDIAS PARA MAS CHICO QUE TELEFONO  ----------------------*/
@@ -241,6 +262,9 @@
     }
     .casco1 {
         width: 28vw;
+    }
+    #words1{
+        display: none;
     }
 }
 
