@@ -1,0 +1,222 @@
+
+main {
+    height: 580px;
+    display: flex;
+    align-items: center; /* centramos los contenidos dentro del main */
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.container-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+/* truco cona */
+.truquito-content2{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #0d363fe0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+.truquito-content2:hover{
+    opacity: 1;
+}
+.truquito-content2 h1{
+    font-family: Poppins, Lato, Sans-serif, Arial;
+    font-size: 4.5vw;
+    font-weight:300;
+    color: #ffffff;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+    padding-bottom: 3vw;
+}
+.truquito-content2 h3{
+    font-size: 2vw;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 16vw;
+    font-family: Poppins, Lato, Sans serif, Arial;
+    font-weight: 200;
+    font-style: italic;
+}
+.truquito-content2 > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+.truquito-content2:hover > *{
+    transform: translateY(0px)
+}
+/* fin truco cona */
+
+.carruseles {
+    width: 400%;/* aca le pongo 400% porque son 4 imagenes, */
+    height: 100%;
+    display: flex;
+}
+.slider-section {
+    width: calc(400%/4);/* entre 4 porque son 4 imagenes */
+    height: 100%;
+}
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    font-size: 8.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #b0b2b6;
+    color: #fff;
+}
+
+.btn-left {
+    left: 2%;
+}
+
+.btn-right {
+    right: 2%;
+}
+
+/*iconos y h1*/
+
+.proyectos-1{
+    display: flex;
+    font-size: 1.7rem;
+    font-family: Poppins, Lato, Sans-serif, Arial;
+    color: #fff;
+    background-color: #9F0000;
+    height: auto;
+    padding: 8px 50px;
+    border-radius: 2rem;
+    margin-top: 240px;
+    position: absolute;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none
+}
+
+.proyectos-1:hover{
+    background-color: 9F0000;
+    box-shadow: 0px 10px 15px rgb(119, 113, 113);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.logo-1{
+    width: 240px;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 560px;
+}
+
+@media (max-width:767px) {
+    main {
+        height: 450px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(2px);
+        margin-top: 95px; /* 95 para que quede al raz del menú */
+        padding: 1px;
+    }
+
+    .proyectos-1{
+        display: flex;
+        font-size: 3vw;
+        height: auto;
+        padding: 8px 38px;
+        border-radius: 2rem;
+        margin-top: 220px;
+        position: absolute;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .logo-1{
+        width: 190px;
+        height: auto;
+        border-radius: 50%;
+        position: absolute;
+        margin-top: 480px;
+    }
+    .btn-left,
+    .btn-right {
+        display: flex;
+        position: absolute;
+        top: 45%;
+        font-size: 4.8rem;
+        background-color: transparent;
+        border-radius: 50%;
+        padding: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        color: #ffffff81;
+        transform: translate(0, -50%);
+        transition: .5s ease;
+        user-select: none;
+    }
+
+    .truquito-content2 h1{
+        font-family: Poppins, Lato, Sans-serif, Arial;
+        font-size: 5vw;
+        font-weight:300;
+        color: #ffffff;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        text-align: center;
+        padding-bottom: 7vw;
+    }
+    .truquito-content2 h3{
+        font-family: Poppins, Lato, Sans-serif, Arial;
+        font-weight:300;
+        font-size: 4vw;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 18vw;
+    }
+    
+    @media only screen and (max-width:515px){
+        main{
+            margin-top: 79px;
+        }
+        .proyectos-1 {
+            font-size: 3.8vw;
+        }
+        .truquito-content2 h3 {
+            margin-bottom: 10vw;
+        }
+    }
+}

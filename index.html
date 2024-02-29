@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construcciones-Roca</title>
+    <link rel="stylesheet" href="./style/navegador.css">
+    <link rel="stylesheet" href="./style/carrusel.css">
+    <link rel="stylesheet" href="./style/proyecto-contacto.css">
+    <link rel="stylesheet" href="./style/quienes-somos.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!------------------------------ INICIO SECCION-------------------------->
+    <header class="header" id="Inicio">
+        <nav class="nav-menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="menu-icon"><img src="./img/Menu.png" alt="image menu"></i>
+            </label>
+            <ul>
+                <li><a class="navegadores" href="#Inicio">Inicio</a></li>
+                <li><a class="navegadores" href="#Quienes-somos">Quienes Somos</a></li>
+                <li><a class="navegadores" href="#Proyecto">Proyectos</a></li>
+                <li><a class="navegadores" href="#Info-contacto">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!------------------------------ CARRUSEL -------------------------->
+    <main>
+        <div class="container-carousel">
+            <div class="carruseles" id="slider">
+                <section class="slider-section">
+                    <img src="./img/carrusel-1.jpg">
+                </section>
+                <section class="slider-section">
+                    <img src="./img/carrusel-2.jpg">
+                </section>
+                <section class="slider-section">
+                    <img src="./img/carrusel-3.jpg">
+                </section>
+                <section class="slider-section">
+                    <img src="./img/carrusel-4.jpg">
+                </section>
+            </div>
+            <div class="truquito-content2">
+                <h1>Servicios de contrucciones y remodelaciones de hogares</h1>
+                <h3>Tú lo sueñas, nosotros lo construimos.</h3>
+            </div>
+
+            <div class="btn-left"><i class='bx bx-chevron-left'></i></div>
+            <div class="btn-right"><i class='bx bx-chevron-right'></i></div> <!-- Corregido aquí -->
+        </div>
+        <!------------------------------ BOTON QUE REDIRIGE A PROYECTOS-------------------------->
+        <a class="proyectos-1" href="./proyectos.jsp">Proyectos</a>
+
+        <img class="logo-1" src="./img/logo.jpeg" alt="logo">
+    </main>
+
+    <!------------------------------ QUIENES SOMOS -------------------------->
+    <div class="contenedor-central-1">
+
+        <div class="quienes-somos" id="Quienes-somos">
+            <img class="logo2" src="./img/logo.jpeg" alt="logo">
+            <div>
+                <h2 class="h2">Quienes Somos</h2>
+            </div>
+        </div>
+        <div>
+
+            <div class="img-quienes-somos">
+
+                <img class="imagencita1" src="./img/quienes-somos.jpg" alt="quienes somos">
+                <!------------------ Contenido parrafo de quienes somos------------------>
+
+                <div class="truquito-content">
+                    <p class="parrafito">Armando Roca le ha dedicado 5 años a esta
+                        compañía con el propósito de hacer realidad la visión de cada
+                        uno de sus clientes, desde grandes empresas a hogares. Armando
+                        Roca y su Equipo han logrado de manera eficaz todos sus proyectos.
+                    </p>
+
+                    <!------------------ agregar lista ------------------>
+                </div>
+            </div>
+
+            <a class="trabaja-nosotros1" href="#Info-contacto">Trabaja con nosotros</a>
+
+            <!-------------------- position para img casco  ---------------------->
+            <div>
+                <div class="casco-container">
+                    <img class="casco1" src="./img/casco.png" alt="casco">
+                </div>
+            </div>
+        </div>
+
+        <!-------------------- position para img tuerca-------------------->
+        <div class="tuerca-container"> <!-- Contenedor adicional para la tuerca -->
+            <img class="tuerca" src="./img/tuerca.png" alt="tuerca">
+        </div>
+
+        <!---------------texto slogan al final de quienes somos -------------->
+    </div>
+    <div class="espacio-jeje">
+        <h3 class="h3"> Permitenos ayudarte a hacer realidad tus <span id="span-slogan">sueños</span></h3>
+    </div>
+
+
+
+    <!------------------------------ PROYECTO SECCION-------------------------->
+    <div class="proyecto" id="Proyecto">
+        <div id="header-proyecto">
+            <img id="logo" src="./img/logo.jpeg" />
+            <div id="titulo-container">
+                <div id="titulo-proyecto">
+                    <h2>Proyectos</h2>
+                </div>
+            </div>
+        </div>
+        <p id="texto-info">
+            Nos Especializamos en Albañilería, Estucos, Radier, Maquillaje carpintería,
+            Obra gruesa, Pintura, Empaste, Yeso, Cerámicas, Asfalto frio y caliente.
+        </p>
+        <div class="tipos-proyectos">
+            <div id="personalizado">
+                <img id="foto" src="./img/personalizado.jpeg" />
+                <div id="content">
+                    <h3 id="subtitulo">Proyectos personalizados</h3>
+                    <button id="Ver-mas"><a href="./proyectos.jsp">Ver mas</a></button>
+                </div>
+            </div>
+            <div id="beetween"></div>
+            <div id="empresa">
+                <img id="foto" src="./img/empresa.jpeg" />
+                <div id="content">
+                    <h3 id="subtitulo-hidden">Proyectos personalizados y con empresas</h3>
+                    <h3 id="subtitulo">Proyectos con otras empresas</h3>
+                    <ul class="lista-nombres">
+                        <li class="lista">Empresas PGC Constructora</li>
+                        <li class="lista">Camus Estructuras Metálicas</li>
+                    </ul>
+                    <button id="Ver-mas"><a href="./proyectos.jsp">Ver mas</a></button>
+                </div>
+            </div>
+        </div>
+        <button id="contacto"><a href="#Info-contacto">Contactanos</a></button>
+        <!------------------------------ STATS SECCION DENTRO DE PROYECTOS-------------------------->
+
+        <div class="container-stats">
+            <div class="stats">
+                <hr />
+                <h3 id="info-cantidad">+10</h3>
+                <p id="info-detalle">Proyectos personalizados realizados</p>
+            </div>
+            <img id="tools" src="./img/tools.png" />
+            <div class="stats">
+                <hr />
+                <h3 id="info-cantidad">+10</h3>
+                <p id="info-detalle">Proyectos con otras empresas realizados</p>
+            </div>
+        </div>
+    </div>
+    <!------------------------------ CONTACTO SECCION-------------------------->
+    <div class="info-contacto" id="Info-contacto">
+        <div id="contacto-container">
+            <div id="subtitulo-contacto">
+                <h2>Contacto</h2>
+            </div>
+        </div>
+        <div id="texto-comunicacion">
+            <p>¿Tienes consultas?, Hablanos para resolver tus dudas!</p>
+        </div>
+        <div id="comunicacion">
+            <div id="primer-contacto">
+                <a href="https://api.whatsapp.com/send?phone=+56983965737&text=Hola%20Construcciones%20Roca,%20me%20gustaría%20obtener%20más%20información%20para%20contratar%20sus%20servicios."
+                    class="link">
+                    <img id="whatsapp" src="./img/whatsApp.png" alt="whatsApp" />
+                </a>
+                <span>+56 9 8396 5737</span>
+            </div>
+            <div id="segundo-contacto">
+                <a href="mailto:jhoneldroca6@gmail.com?subject=Consulta%20sobre%20Construcciones%20Roca" class="link">
+                    <img id="gmail" src="./img/Gmail.png" alt="gmail" />
+                </a>
+                <span>jhoneldroca6@gmail.com</span>
+            </div>
+            <!------------------------------ FOOTER SECCION-------------------------->
+            <footer>
+                <div class="footer-nav">
+                    <a id="menu-link" href="#Inicio">Inicio</a>
+                    <a id="menu-link" href="#Quienes-somos">Quienes somos</a>
+                    <a id="menu-link" href="#Proyecto">Proyectos</a>
+                    <a id="menu-link" href="#Info-contacto">Contacto</a>
+                </div>
+                <div id="redes-sociales">
+                    <a href="/"><img id="img-redes" src="./img/TikTok.png" alt="TikTok" /></a>
+                    <a href="/"><img id="img-redes" src="./img/Instagram.png" alt="Instagram" /></a>
+                    <a href="/"><img id="img-redes" src="./img/Facebook.png" alt="Facebook" /></a>
+                </div>
+            </footer>
+        </div>
+
+        <!------------------------------ SCRIPT-------------------------->
+        <script src="./script/carrusel.js"></script>
+</body>
+
+</html>

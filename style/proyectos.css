@@ -1,0 +1,640 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Poppins, Lato, Sans serif, Arial;
+}
+html {
+  background: #0d363f;
+}
+/*------------------------------AREA NAVEGADOR ----------------------------- */
+.header {
+  background-color: #ffc300;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: row; /* Los elementos se organizarán hacia abajo en columnas */
+  grid-template-rows: auto; /* Las filas se ajustarán automáticamente al contenido */
+  gap: 10px;
+  justify-content: center; /* Centra el contenido horizontalmente dentro del rectangulo */
+  align-items: center; /* Centra el contenido verticalmente dentro del rectangulo */
+  padding: 1.8rem 3.8rem; /*el es contenido del rectangulo, no de los nav que están dentro*/
+}
+/*-----NAVEGADORESSSS-----*/
+/*necesitaba darle el ancho completo para que los nav puedan moverse deacuerdo al tamaño*/
+.nav-menu {
+  width: 100%; /*me tenia cabexzóoon xd, sin esto, las configuraciones que vienen mas abajo no funcionan*/
+  grid-column: 1/12;
+}
+
+/* Estilo del menú de navegación */
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* se distribuye el espacio dentro del rectangulo(header) */
+  text-align: center; /* Centramos el texto de los elementos del menú */
+  position: relative;
+}
+/* Estilo de los elementos de lista del menú */
+.nav-menu li {
+  margin-right: 1.3rem;
+  font-size: 21px;
+  position: relative; /* Necesario para posicionar el subrayado amarillo*/
+}
+/* color del navegador del menú */
+.nav-menu a {
+  color: #0d363f;
+  position: relative; /* Necesario para posicionar el subrayado */
+}
+/* Estilo del subrayado */
+.nav-menu a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #9f0000;
+  position: absolute;
+  bottom: -5px;
+  left: 0; /* Cambiamos esto a 0 */
+  right: 0; /* Añadimos esto para que ocupe todo el ancho del enlace */
+  margin: 0 auto; /* Centramos horizontalmente */
+  transition: width 0.4s ease-in-out; /* Solo la transición de width */
+}
+/* Subrayado al pasar el mouse */
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  color: #9f0000;
+}
+h5 {
+  font-size: 50px;
+  margin-top: 150px;
+  padding: 50px 240px;
+}
+
+.menu-icon img {
+  width: 92px;
+  height: auto;
+}
+.menu-icon,
+#check {
+  display: none;
+}
+/*------------------------------AREA TITULO ----------------------------- */
+.section-titulo {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: row; /* Los elementos se organizarán hacia abajo en columnas */
+  grid-template-rows: auto; /* Las filas se ajustarán automáticamente al contenido */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#titulo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header-proyecto{
+  display: grid;
+  grid-column: 4 / span 6;
+  grid-row: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#titulo-proyecto{
+  width: 100%;
+}
+h2 {
+  color: white;
+  font-family: Poppins, Lato, Sans serif, Arial;
+  font-size: 3.5em;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 2vw;
+}
+#texto-info {
+  grid-column: 2/ span 10;
+  grid-row: 2;
+  margin: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2em;
+  font-family: Poppins, Lato, Sans serif, Arial;
+  color: white;
+  
+
+}
+#logo {
+  width: 12%;
+  border-radius: 20vw;
+  margin-right: 5vw;
+  margin-top: 3vw;
+}
+/*--------------------AREA DE CARRUSEL----------------- */
+main {
+  width: 100%;
+  display: flex;
+  align-items: center; /* centramos los contenidos dentro del main */
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.container-carousel {
+  position: relative;
+  width: 55vw;
+  height: 65vw;
+  overflow: hidden;
+}
+
+.carruseles {
+  width: 600%; /* aca le pongo 400% porque son 4 imagenes, */
+  display: flex;
+}
+
+.slider-section {
+  width: calc(600% / 6); /* entre 4 porque son 4 imagenes */
+  height: 30%;
+}
+
+.slider-section img {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Esto mantendrá la proporción de aspecto de la imagen */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  max-height: 100%; /* Asegura que la imagen no exceda el alto del contenedor */
+  object-fit: cover;
+}
+
+.btn-left,
+.btn-right {
+  display: flex;
+  position: absolute;
+  top: 45%;
+  font-size: 8.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff81;
+  transform: translate(0, -50%);
+  transition: 0.5s ease;
+  user-select: none;
+}
+.btn-left:hover,
+.btn-right:hover {
+  background-color: #b0b2b6;
+  color: #fff;
+}
+.btn-left {
+  left: 0vw;
+}
+.btn-right {
+  right: 2%;
+}
+/*--------------------AREA CONTACTO Y TEXTO----------------- */
+.info-contacto {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: row; /* Los elementos se organizarán hacia abajo en columnas */
+  grid-template-rows: auto; /* Las filas se ajustarán automáticamente al contenido */
+  gap: 10px;
+  background-color: #0d363f;
+  width: 100%;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+}
+#texto-comunicacion {
+  grid-column: 2 / span 4;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-family: Poppins, Lato, Sans serif, Arial;
+  color: white;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+#texto-comunicacion:hover {
+  transform: translateY(7px);
+}
+#comunicacion {
+  grid-column: 5 / span 8;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+}
+#primer-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw;
+}
+#segundo-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw;
+  margin-left: 8.5vw;
+}
+#whatsapp {
+  width: 6vw;
+  height: 6vw;
+}
+#gmail {
+  width: 6vw;
+  height: 6vw;
+}
+span {
+  margin-left: 5vw;
+  color: white;
+  font-family: Poppins, Lato, Sans serif, Arial;
+  font-size: 1.5em;
+  font-weight: 100;
+  font-style: italic;
+}
+.logo {
+  grid-row: 2;
+  padding: 2vw;
+  grid-column: 4 / span 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#img-logo {
+  border-radius: 5vw;
+  box-shadow: 2vw #373838;
+  width: 10vw;
+  height: 10vw;
+}
+/*--------------------AREA DE FOOTER----------------- */
+footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: row; /* Los elementos se organizarán hacia abajo en columnas */
+  grid-template-rows: auto; /* Las filas se ajustarán automáticamente al contenido */
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 1.5vw;
+}
+.footer-nav {
+  grid-column: 3 / span 5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1em;
+  font-family: Poppins, Lato, Sans serif, Arial;
+  text-decoration: none;
+  color: white;
+}
+.link {
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 1vw 1vw 1vw 1vw;
+  position: relative;
+}
+.link:hover {
+  transform: translateY(-20px);
+}
+.link:hover {
+  transform: translateY(-20px);
+}
+.link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s ease;
+}
+.link:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#menu-link {
+  color: #425f66;
+  line-height: 2;
+  position: relative;
+}
+#menu-link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #ffc300;
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transition: width 0.4s, left 0.4s;
+}
+#menu-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+#redes-sociales {
+  grid-column: 4/ 10;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top:3vw;
+}
+#img-redes {
+  width: 3vw;
+  height: 3vw;
+}
+/*--------------------MEDIA QUERIES----------------- */
+/*---------PARA DISPOSITIVOS MOVILES-------- */
+@media (max-width: 767px) {
+ 
+ 
+.section-titulo {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-top: 15vw;
+}
+#titulo-container {
+  height: 20vw;
+  margin-left: 5vw;
+}
+#header-proyecto{
+  display: grid;
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#titulo-proyecto{
+  margin-right: 20vw;
+}
+  h2 {
+    font-size: 2em;
+    margin-top: 2vw;
+  }
+  #texto-info {
+    margin: 4.5vw;
+    font-size: 1.5em;
+    grid-column: 1/ span 3;
+    grid-row: 2;
+  }
+  #logo {
+    width: 15%;
+    border-radius: 20vw;
+    margin-right: 1vw;
+    margin-top: 4vw;
+  }
+    /*--------------------AREA DE CARRUSEL----------------- */
+  .container-carousel {
+      width: 70vw;
+      height: 80vw;
+   }
+  .carruseles {
+      width: 600%; /* aca le pongo 400% porque son 4 imagenes, */
+      display: flex;
+  }
+    /*--------------------AREA CONTACTO Y TEXTO----------------- */
+    .info-contacto {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 2vw;
+  }
+    #texto-comunicacion {
+      grid-column: 1 / span 3;
+      margin-left: 5vw;
+      margin-top: 7vw;
+      width: 80%;
+      text-align: center;
+  }
+    #comunicacion {
+      grid-column: 1 / span 3;
+      grid-row: 2;
+      margin-top: 12vw;
+  }
+    #primer-contacto {
+      margin: 0vw;
+      margin-right: 20vw;
+    }
+    #segundo-contacto {
+      margin-left: 3vw;
+  }
+    .logo {
+      padding: 0vw;
+      grid-column: 1 / span 3;
+      grid-row: 3;
+      margin-top: 5vw;
+  }
+    #img-logo {
+      margin-right: 5vw;
+  }
+
+    /*--------------------AREA FOOTER----------------- */
+    footer {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+  }
+    .footer-nav {
+      display: none;
+  }
+    #redes-sociales {
+      grid-column: 1 / span 3;
+      justify-content: center;
+      margin-top: 5vw;
+      margin-left: -2vw;
+  }
+    #img-redes {
+      margin: 2vw;
+  }
+}
+/*--------------------MEDIA QUERIES----------------- */
+/*---------PARA TABLETS-------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  
+  .section-titulo {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin-top: 10vw;
+  }
+  #titulo-container {
+    height: 15vw;
+    grid-column: 1/ span 3;
+  }
+  #header-proyecto{
+    display: grid;
+    grid-column: 1 / span 6;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10vw;
+  }
+  #titulo-proyecto{
+    width: 95%;
+  }
+  #logo{
+    margin-right: 0vw;
+
+  }
+  h2 {
+    font-size: 3em;
+    margin-right: 20vw;
+  }
+  #texto-info {
+    margin: 4.5vw;
+    font-size: 1.5em;
+    grid-column: 1/span 6;
+    grid-row: 2;
+  }
+  /*--------------------AREA DE CARRUSEL----------------- */
+  .container-carousel {
+    width: 50vw;
+    height: 60vw;
+  }
+  .carruseles {
+    width: 600%; /* aca le pongo 400% porque son 4 imagenes, */
+    display: flex;
+  }
+  /*--------------------AREA CONTACTO Y TEXTO----------------- */
+  .info-contacto {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    width: 100%;
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+  }
+  #texto-comunicacion {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+    margin: 5vw;
+  }
+  #comunicacion {
+    grid-column: 3 / span 4;
+    grid-row: 2;
+  }
+  #primer-contacto {
+    margin: 5vw;
+    margin-right: 23vw;
+  }
+  #segundo-contacto {
+    margin-left: -5.5vw;
+  }
+  span {
+    font-size: 1.3em;
+  }
+  .logo {
+    padding: 0vw;
+    grid-column: 1 / span 2;
+  }
+  #img-logo {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 20vw;
+    margin-left: 8vw;
+  }
+  /*--------------------AREA DE FOOTER----------------- */
+  footer {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 0vw;
+  }
+  .footer-nav {
+    display: none;
+  }
+  #redes-sociales {
+    grid-column: 2 / span 4;
+    justify-content: center;
+    grid-row: 20;
+  }
+  #img-redes {
+    margin: 2vw;
+  }
+}
+
+/*------------------------ MEDIA QUERIE PARA NAVEGADOR----------------------------*/
+
+
+@media (max-width: 1023px) {
+  /* Estilo del header, imaginalo como un rectangulo */
+ .header {
+  background-color: #FFC300;
+  display: flex;
+  justify-content: center;/* Centra el contenido horizontalmente dentro del rectangulo */
+  align-items: center;/* Centra el contenido verticalmente dentro del rectangulo */
+  height: 3vw;
+  position: fixed; /* Agregamos posición relativa para poder posicionar los elementos hijos */
+  top: 0;
+  width: 100%;
+  z-index: 3; /* Aseguramos que el header esté encima de otros elementos */
+}
+
+.checkbtn {
+  display: block;
+}
+
+/*posicionamos la imagen como queremos que se vea en dispositivos moviles*/
+.menu-icon {
+  display: block;
+  position: fixed;
+  top: 18px;
+  right: 26px;
+  cursor: pointer;
+  z-index: 3; /* Aseguramos que el ícono del menú esté encima de otros elementos */
+}
+
+.nav-menu ul {
+  display: block;
+  position: fixed; /* Cambiamos la posición a fija para que el menú permanezca estático */
+  top: 5rem; /* Ajusta según sea necesario para evitar que se superponga con el encabezado */
+  left: -100%;
+  background-color: rgba(255, 195, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  right: 0;
+  z-index: 2; /* Aseguramos que el menú esté encima de otros elementos */
+  
+}
+
+/* Estilo del menú de navegación */
+.nav-menu ul li {
+  padding: 2.4rem;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+/* color del navegador del menú */
+.nav-menu a {
+  color: #ffffff;
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  font-weight: 600;
+/*         color: black; probar con esto si quieres letras negras para que contraste con el menú 
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); y recuerda ponerle el ancho de la imagen en 60px */
+}
+
+.nav-menu ul li:last-child {
+  background: none;
+  padding: 1rem;
+}
+#check:checked~ul {
+  left: 0;
+  transition: all .25s;
+}
+}

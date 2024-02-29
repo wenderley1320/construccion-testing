@@ -1,0 +1,246 @@
+*{
+    padding:0;
+    margin:0;
+}
+.contenedor-central-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px; /* 70 */
+    margin-bottom: 140px;
+    background-color: #ffffff;
+}
+.quienes-somos {
+    width: 69%;
+    background-color: #ffc300;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centramos el contenido horizontalmente */
+    margin-top: 45px; /* 38 */
+    position: relative; /* Añadimos posición relativa para posicionar el logo */
+}
+.logo2 {
+    width: 22%;
+    position: absolute;
+    left: -14vw; /* Colocamos el logo al 10% del lado izquierdo del div */
+    margin-top: 1vw;
+}
+
+/* tratando de hacer el truquito de la cona */
+.img-quienes-somos {
+    width: 65vw;
+    height: 42vw;
+    overflow: hidden;
+    margin-top: 10%;
+    border-radius: 6.2vw 0px 6.2vw 0px;
+    position: relative;
+}
+.img-quienes-somos img{
+    width: 100%;
+    margin: auto;
+}
+
+.truquito-content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #0d363fe0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+.truquito-content:hover{
+    opacity: 1;
+}
+.truquito-content p{
+    font-size: 2.14vw;
+    color: #ffffff;
+    align-items: end;
+    margin-left: 30vw;
+    margin-right: 5vw;
+    font-family: Poppins, Lato, Sans serif, Arial;
+}
+.truquito-content > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+.truquito-content:hover > *{
+    transform: translateY(0px)
+}
+/*  FIN TRUQUITO CONA */
+.trabaja-nosotros1{
+    display: flex;
+    font-size: 2.5vw;
+    font-family: Poppins, Lato, Sans-serif, Arial;
+    text-align: center;
+    color: #fff;
+    background-color: #9F0000;
+    padding: 8px 40px;
+    border-radius: 2rem;
+    margin-top: 0px;
+    position: absolute;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.trabaja-nosotros1:hover {
+    background-color: #9F0000;
+    box-shadow: 0px 10px 15px rgb(119, 113, 113);
+    color: #fff;
+    transform: translate(-50%, -50%) translateY(-7px);
+}
+
+.casco-container{
+    position: absolute; /* Posicionamos la tuerca */
+    right: 8%;
+    top: 12vh;
+}
+
+.casco1{
+    width: 25vw;
+}
+
+.tuerca-container {
+    position: absolute; /* Posicionamos la tuerca */
+    left: -8px; /* La colocamos en el extremo izquierdo */
+    bottom: -30vh;
+}
+
+.tuerca{
+    width: 18vw;  
+}
+
+.espacio-jeje{
+    display: block;
+    font-family: Poppins, Lato, Sans serif, Arial;
+    border-radius: 0 0vw 10vw 0vw;
+    background-color: #0D363F;
+    /* height: 5vw; */
+    margin-top:-3vw;
+}
+.h3{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1vw;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: Poppins, Lato, Sans serif, Arial;
+    padding: 14px 0;
+}
+#span-slogan{
+    display: block;
+    font-family: Poppins, Lato, Sans serif, Arial;
+    font-size: 1.5rem;
+    margin-left: 1vw;
+    padding-top: 1vh;
+}
+/*-------------------- MEDIAS QUERIES ----------------------*/
+/*-------------------- PARA MOVILES----------------------*/
+@media (max-width: 767px) {
+    .quienes-somos {
+        margin-top: 10px;
+        width: 95%;
+    }
+    .contenedor-central-1{
+        margin-top: 6.2rem;
+        margin-bottom: 70px;
+    }
+    .logo2{
+        display: none;
+    }
+    .trabaja-nosotros1{
+        font-size: 3vw;
+        padding: 8px 20px;
+        text-align: center;
+    }
+    .img-quienes-somos{
+        border-radius: 2.8rem 0px;
+        height: 100%;
+    }
+    .tuerca-container {
+        position: absolute;
+        left: -22px;
+        bottom: -30%;
+    }
+    .tuerca{
+        display: none;
+    }
+    .casco-container{
+        position: absolute; /* Posicionamos la tuerca */
+        right: 8%;
+        top: 10%;
+    }
+    .espacio-jeje{
+        color: #ffffff;
+        display: block;
+        margin: 9vw 0 3rem 0;
+        text-align: center;
+        background-color: #0D363F;
+        border-radius: 0px 0px 40px; 
+        /* height: 12vw; */
+    }
+    .h3{
+        display: block;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        width: 100%;
+        padding: 8px 0;
+        font-family: Poppins, Lato, Sans serif, Arial;
+    }
+    #span-slogan{
+        display: block;
+        font-family: Poppins, Lato, Sans serif, Arial;
+        margin-left: 1vw;
+    }
+
+    .truquito-content p {
+        font-size: 2.9vw;
+        margin-left: 32vw;
+        margin-right: 5vw;
+    }
+}
+/*-------------------- MEDIAS PARA MAS CHICO QUE TELEFONO  ----------------------*/
+
+@media only screen and (max-width:515px){
+    .tuerca-container {
+        left: -22px;
+        bottom: -27%;
+    }
+    .trabaja-nosotros1 {
+        font-size: 3.2vw;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    .truquito-content p {
+        font-size: 3.6vw;
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+    .tuerca-container {
+        display: none;
+    }
+    .img-quienes-somos img {
+        height: 62vw;
+    }
+    .casco-container {
+        right: 8%;
+        top: 8%;
+    }
+    .casco1 {
+        width: 28vw;
+    }
+}
+

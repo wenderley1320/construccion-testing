@@ -1,0 +1,181 @@
+/* Reset de estilos */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilo del cuerpo */
+body {
+    background-color: #ffffff;
+}
+
+/* Estilo del header, imaginalo como un rectangulo */
+.header {
+    background-color: #FFC300;
+    display: flex;
+    justify-content: center;/* Centra el contenido horizontalmente dentro del rectangulo */
+    align-items: center;/* Centra el contenido verticalmente dentro del rectangulo */
+    padding: 1.8rem 3.8rem;/*el es contenido del rectangulo, no de los nav que están dentro*/
+}
+
+/*-----NAVEGADORESSSS-----*/
+/*necesitaba darle el ancho completo para que los nav puedan moverse deacuerdo al tamaño*/
+.nav-menu {
+    width: 100%;/*me tenia cabexzóoon xd, sin esto, las configuraciones que vienen mas abajo no funcionan*/
+}
+
+/* Estilo del menú de navegación */
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;/* se distribuye el espacio dentro del rectangulo(header) */
+    text-align: center;/* Centramos el texto de los elementos del menú */
+    position: relative;
+}
+
+/* Estilo de los elementos de lista del menú */
+.nav-menu li {
+    margin-right: 1.3rem;
+    font-size: 22px;
+    position: relative; /* Necesario para posicionar el subrayado amarillo*/
+}
+
+
+/* color del navegador del menú */
+.nav-menu a {
+    color: #0D363F;
+    position: relative; /* Necesario para posicionar el subrayado */
+}
+
+/* Estilo del subrayado */
+.nav-menu a::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #9F0000;
+    position: absolute;
+    bottom: -5px;
+    left: 0; /* Cambiamos esto a 0 */
+    right: 0; /* Añadimos esto para que ocupe todo el ancho del enlace */
+    margin: 0 auto; /* Centramos horizontalmente */
+    transition: width 0.4s ease-in-out; /* Solo la transición de width */
+}
+
+/* Subrayado al pasar el mouse */
+.nav-menu a:hover::before {
+    width: 100%;
+}
+
+.nav-menu a:hover{
+    color: #9F0000;
+}
+
+
+
+
+
+h5{
+    font-size: 50px;
+    margin-top: 150px;
+    padding:50px 240px;
+}
+
+.menu-icon img {
+    width: 109px;
+    height: auto;
+}
+
+.menu-icon, #check {
+    display: none;
+}
+
+@media only screen and (max-width:767px) {
+
+    /* Estilo del header, imaginalo como un rectangulo */
+    .header {
+        background-color: #FFC300;
+        display: flex;
+        justify-content: center;/* Centra el contenido horizontalmente dentro del rectangulo */
+        align-items: center;/* Centra el contenido verticalmente dentro del rectangulo */
+        padding: 3rem 3.8rem;/*el es contenido del rectangulo, no de los nav que están dentro*/
+        position: fixed; /* Agregamos posición relativa para poder posicionar los elementos hijos */
+        top: 0;
+        width: 100%;
+        z-index: 3; /* Aseguramos que el header esté encima de otros elementos */
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    /*posicionamos la imagen como queremos que se vea en dispositivos moviles*/
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 22px;
+        right: 22px;
+        cursor: pointer;
+        z-index: 3; /* Aseguramos que el ícono del menú esté encima de otros elementos */
+    }
+
+    .nav-menu ul {
+        display: block;
+        position: fixed; /* Cambiamos la posición a fija para que el menú permanezca estático */
+        top: 6rem; /* Ajusta según sea necesario para evitar que se superponga con el encabezado */
+        left: -100%;
+        background-color: rgba(255, 195, 0, 0.8);
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        z-index: 2; /* Aseguramos que el menú esté encima de otros elementos */
+        
+    }
+
+    /* Estilo del menú de navegación */
+    .nav-menu ul li {
+        padding: 2.4rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-size: 2.1rem;
+        font-weight: bold;
+    }
+
+    /* color del navegador del menú */
+    .nav-menu a {
+        color: #ffffff;
+        text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        font-weight: 600;
+/*         color: black; probar con esto si quieres letras negras para que contraste con el menú 
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); y recuerda ponerle el ancho de la imagen en 60px */
+}
+
+    .nav-menu ul li:last-child {
+        background: none;
+        padding: 1rem;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        transition: all .25s;
+    }
+
+    @media only screen and (max-width:515px){
+        .header {
+            padding: 2.5rem 3.8rem;
+        }
+        .menu-icon img {
+            width: 98px;
+        }
+        .menu-icon {
+            top: 17px;
+            right: 17px;
+        }
+        .nav-menu ul {
+            top: 5rem;
+        }
+    }
+}
